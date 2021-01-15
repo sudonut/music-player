@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Media</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-image"></div>
+    <div class="app">
+      <div class="navigation">
+        <input type="text" placeholder="Search for song..." class="songInput" />
+        <div class="links">
+          <p><i class="fas fa-compact-disc"></i> Albums</p>
+          <p><i class="fas fa-microphone"></i> Artists</p>
+          <p><i class="fas fa-file-audio"></i> Playlists</p>
+          <p><i class="fas fa-music"></i> Songs</p>
+          <p><i class="fas fa-sliders-h"></i> Settings</p>
+        </div>
+      </div>
+      <div class="mainContent">
+        <div class="artwork">
+          <img src="/media-player/images/demo-art.png" height="350px" />
+        </div>
+        <div class="currentSong">
+          <p>The Primals - Exponential Entropy</p>
+        </div>
+      </div>
+      <div class="currentSong">
+        
+      </div>
+      <div class="playerControls">
+        <div class="miniArt">
+          <img src="/media-player/images/demo-art.png" width="120" />
+        </div>
+        <div class="songNav">
+          <div class="playerButtons">
+            <button><i class="fas fa-angle-double-left"></i></button>
+            <button id="play"><i class="fas fa-play"></i></button>
+            <button><i class="fas fa-angle-double-right"></i></button>
+          </div>
+          <!-- <canvas class="progress" width="500" height="100"></canvas> -->
+          <audio
+            id="audio"
+            src="/media-player/The Primals - Exponential Entropy.mp3"
+          ></audio>
+          <!-- <input type="range" />
+          <p>00:00:32 / 03:32:01</p> ontimeupdate="updateBar()"-->
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/8910998b56.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js" async defer></script>
+  </body>
+</html>
