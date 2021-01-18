@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;300;400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -17,14 +17,33 @@
     <div class="background-image"></div>
     <div class="app">
       <div class="navigation">
-        <input type="text" placeholder="Search for song..." class="songInput" />
-        <div class="links">
-          <p><i class="fas fa-compact-disc"></i> Albums</p>
-          <p><i class="fas fa-microphone"></i> Artists</p>
-          <p><i class="fas fa-file-audio"></i> Playlists</p>
-          <p><i class="fas fa-music"></i> Songs</p>
-          <p><i class="fas fa-sliders-h"></i> Settings</p>
+        <div class="profile-container">
+          <img src="/media-player/images/pfp.jpg" />
+          <h2>Miamor</h2>
         </div>
+        <div class="links">
+          <p><i class="fas fa-compact-disc"></i> ALBUMS</p>
+          <p><i class="fas fa-microphone"></i> ARTISTS</p>
+          <p><i class="fas fa-list-ul"></i> PLAYLISTS</p>
+          <p><i class="fas fa-music"></i> SONGS</p>
+          <p><i class="fas fa-sliders-h"></i> SETTINGS</p>
+        </div>
+        <div class="queue-container">
+          <div class="queue-border">Queue</div>
+          <ul>
+            <li>Exponential Entropy</li>
+            <li>Rise</li>
+            <li>Swimming Pools</li>
+            <li>ADHD</li>
+          </ul>
+        </div>
+      </div>
+      <div class="search-container">
+        <div class="search">
+          <span class="fas fa-search"></span>
+          <input type="search" placeholder="Search for a song..."">
+        </div>
+        <input type="file" />
       </div>
       <div class="mainContent">
         <div class="artwork">
@@ -34,26 +53,33 @@
           <p>The Primals - Exponential Entropy</p>
         </div>
       </div>
-      <div class="currentSong">
-        
+      <div class="currentAlbum">
+        <div class="miniArt">
+          <img src="/media-player/images/demo-art.png" />
+        </div>
+        <div class="songAlbum">
+          <h4>Exponential Entropy</h4>
+          <p>The Primals</p>
+        </div>
       </div>
       <div class="playerControls">
-        <div class="miniArt">
-          <img src="/media-player/images/demo-art.png" width="120" />
-        </div>
         <div class="songNav">
           <div class="playerButtons">
             <button><i class="fas fa-angle-double-left"></i></button>
             <button id="play"><i class="fas fa-play"></i></button>
             <button><i class="fas fa-angle-double-right"></i></button>
           </div>
-          <!-- <canvas class="progress" width="500" height="100"></canvas> -->
+          <div class="interactive">
+            <p id="current-time">0:00</p>
+            <div class="audio-container">
+              <div id="audio-bar"></div>
+            </div>
+            <p id="song-length"></p>
+          </div>
           <audio
             id="audio"
             src="/media-player/The Primals - Exponential Entropy.mp3"
           ></audio>
-          <!-- <input type="range" />
-          <p>00:00:32 / 03:32:01</p> ontimeupdate="updateBar()"-->
         </div>
       </div>
     </div>
