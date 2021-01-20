@@ -3,18 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Media</title>
+    <title>Music Player</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500&family=Saira+Semi+Condensed:wght@100;300;400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="background-image"></div>
     <div class="app">
       <div class="navigation">
         <div class="profile-container">
@@ -22,10 +21,10 @@
           <h2>Miamor</h2>
         </div>
         <div class="links">
-          <p><i class="fas fa-compact-disc"></i> ALBUMS</p>
-          <p><i class="fas fa-microphone"></i> ARTISTS</p>
-          <p><i class="fas fa-list-ul"></i> PLAYLISTS</p>
+          <p><i class="fas fa-home"></i> HOME</p>
           <p><i class="fas fa-music"></i> SONGS</p>
+          <p><i class="fas fa-list-ul"></i> PLAYLISTS</p>
+          <p><i class="fas fa-microphone"></i> ARTISTS</p>
           <p><i class="fas fa-sliders-h"></i> SETTINGS</p>
         </div>
         <div class="queue-container">
@@ -38,19 +37,81 @@
           </ul>
         </div>
       </div>
-      <div class="search-container">
-        <div class="search">
-          <span class="fas fa-search"></span>
-          <input type="search" placeholder="Search for a song..."">
-        </div>
-        <input type="file" />
-      </div>
       <div class="mainContent">
-        <div class="artwork">
-          <img src="/media-player/images/demo-art.png" height="350px" />
+        <div class="songs-container">
+          <div class="next-song"></div>
+          <div class="past-songs-wrapper">
+            <div class="past-songs">
+              <div class="song">
+                <img src="/media-player/images/demo-art.png" height="70px" />
+                <h4>Exponential Entropy</h4>
+                <p>The Primals</p>
+              </div>
+              <div class="song">
+                <img src="/media-player/images/demo-art.png" height="70px" />
+                <h4>Exponential Entropy</h4>
+                <p>The Primals</p>
+              </div>
+              <div class="song">
+                <img src="/media-player/images/demo-art.png" height="70px" />
+                <h4>Exponential Entropy</h4>
+                <p>The Primals</p>
+              </div>
+              <div class="song">
+                <img src="/media-player/images/demo-art.png" height="70px" />
+                <h4>Exponential Entropy</h4>
+                <p>The Primals</p>
+              </div>
+              <div class="song">
+                <img src="/media-player/images/demo-art.png" height="70px" />
+                <h4>Exponential Entropy</h4>
+                <p>The Primals</p>
+              </div>
+              <div class="song">
+                <img src="/media-player/images/demo-art.png" height="70px" />
+                <h4>Exponential Entropy</h4>
+                <p>The Primals</p>
+              </div>
+            </div>
+          </div>
+          <div class="recent-songs"></div>
         </div>
-        <div class="currentSong">
-          <p>The Primals - Exponential Entropy</p>
+        <div class="recommended-albums">
+          <header>
+            <h1>Recommended Albums</h1>
+          </header>
+          <div class="album-container">
+            <div class="album">
+              <img src="/media-player/images/demo-art.png" />
+              <h4>The Primals</h4>
+              <p>Exponential Entropy</p>
+            </div>
+            <div class="album">
+              <img src="/media-player/images/demo-art.png" />
+              <h4>The Primals</h4>
+              <p>Exponential Entropy</p>
+            </div>
+            <div class="album">
+              <img src="/media-player/images/demo-art.png" />
+              <h4>The Primals</h4>
+              <p>Exponential Entropy</p>
+            </div>
+            <div class="album">
+              <img src="/media-player/images/demo-art.png" />
+              <h4>The Primals</h4>
+              <p>Exponential Entropy</p>
+            </div>
+            <div class="album">
+              <img src="/media-player/images/demo-art.png" />
+              <h4>The Primals</h4>
+              <p>Exponential Entropy</p>
+            </div>
+            <div class="album">
+              <img src="/media-player/images/demo-art.png" />
+              <h4>The Primals</h4>
+              <p>Exponential Entropy</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="currentAlbum">

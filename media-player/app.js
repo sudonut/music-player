@@ -27,7 +27,7 @@ audio.onpause = function () {
 
 // This function updates the playing bar with the current time of the song
 audio.addEventListener("timeupdate", function () {
-  let currentTime = audio.currentTime;
+  let currentTime = audio.currentTime;``
   let duration = audio.duration;
   let minutes = Math.floor(currentTime / 60);
   let seconds = Math.floor(currentTime) - minutes * 60;

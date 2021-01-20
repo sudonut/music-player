@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Saira Semi Condensed', sans-serif;
   overflow: hidden;
+  font-family: 'Saira Semi Condensed', sans-serif;
 }
 
 .app {
@@ -13,6 +13,7 @@
   grid-template-rows: 89%;
 }
 
+/******** Navigation Container *******/
 .profile-container {
   margin-top: 10%;
   width: 70%;
@@ -33,49 +34,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.search-container {
-  display: flex;
-  position: absolute;
-  align-items: center;
-  margin-left: 17%;
-  width: 85%;
-  height: 12%;
-}
-
-.search {
-  flex-grow: 1;
-}
-
-.search .fa-search {
-  position: absolute;
-  padding-top: 20px;
-  padding-left: 14px;
-  color: #2c2c3c;
-}
-
-
-.search > input {
-  color: white;
-  border-color: #2c2c3c;
-  outline: none;
-  padding-top: 1%;
-  background: none;
-  font-size: 18px;
-  border-style: solid;
-  border-width: 2px;
-  padding-left: 42px;
-  padding-bottom: 10px;
-  border-radius: 55px;
-  padding-right: 1.6666666666666666rem
-}
-
-.search > input:focus {
-  border-color: #4dabf7;
-  outline: none;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.0125),0 0 8px rgba(34,139,230,0.5);
-  transition: .3s ease-in-out;
 }
 
 .songInput {
@@ -146,18 +104,117 @@ p > i {
   margin-right: 12px;
 }
 
+/********** MAIN INTERFACE ************/
+
 .mainContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 50px;
-  justify-content: space-evenly;
   background: #191927;
-  -webkit-text-stroke: 0.5px;
-  -webkit-text-stroke-color: black;
 }
 
+.songs-container {
+  display: grid;
+  height: 62%;
+  grid-template-columns: 60% 4% 18%;
+  grid-template-rows: 39% 39%;
+  grid-row-gap: 0%;
+  grid-column-gap: 5%;
+  justify-content: center;
+  align-content: center;
+  grid-row-gap: 5%;
+}
+
+/*********** NEXT SONG TO PLAY *********/
+
+.next-song {
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+}
+
+.past-songs-wrapper {
+  background-color: #1e1e2d;
+  grid-row-start: span 2;
+  border-radius: 6px;
+}
+
+/********** PREVIOUS SONGS CONTAINER **********/
+
+.past-songs {
+  height: 100%;
+  font-size: 18px;
+  padding-top: 6%;
+}
+
+.song {
+  display: grid;
+  align-items: center;
+  color: aliceblue;
+  font-size: 1rem;
+  justify-content: space-evenly;
+  padding-bottom: 5%;
+}
+
+.song > img {
+  width: 70px;
+  border-radius: 10%;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.song > p {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.song > h4 {
+  margin-bottom: -14%;
+}
+
+
+
+.recent-songs {
+  background: green;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/******** CONTAINER FOR ALBUMS IN LIBRARY **********/
+
+.recommended-albums {
+  margin-left: 4%;
+  height: 38%;  
+}
+
+header > h1 {
+  color: white;
+  font-weight: 300;
+  padding-bottom: 2%;
+}
+
+.album-container {
+  width: 96%;
+  height: 86%;
+  display: grid;
+  grid-template-columns: 17% 17% 17% 17% 17% 17%;
+  color: white;
+
+}
+
+
+.album {
+  font-size: 1.2rem;
+  height: 95%;
+  width: 70%;
+  font-family: 'Dosis', sans-serif;
+
+}
+
+.album > img {
+  height: 12.5rem;
+  border-radius: 12px;
+  margin-bottom: 8%;
+}
+
+/********* CURRENT SONG PLAYING ***********/
 .currentAlbum {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -173,6 +230,8 @@ p > i {
   width: 70px;
   border-radius: 10%;
 }
+
+/********* SONG CONTROL - PAUSE / PLAY / NEXT/PREVIOUS SONG ******/
 
 .playerControls {
   grid-column-start: 2;
@@ -196,6 +255,7 @@ p > i {
   width: 85%;
   color: grey;
 }
+
 .audio-container {
   width: 40%;
   background: grey;
@@ -217,8 +277,6 @@ button {
   border: none;
   font-size: 1.875rem;
   color: grey;
-  /* -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black; */
 }
 
 button:hover {
