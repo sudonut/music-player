@@ -14,6 +14,11 @@
 }
 
 /******** Navigation Container *******/
+
+.top-nav {
+  position: fixed;
+}
+
 .profile-container {
   margin-top: 10%;
   width: 70%;
@@ -113,7 +118,7 @@ p > i {
 .songs-container {
   display: grid;
   height: 62%;
-  grid-template-columns: 60% 4% 18%;
+  grid-template-columns: 60% 4% 20%;
   grid-template-rows: 39% 39%;
   grid-row-gap: 0%;
   grid-column-gap: 5%;
@@ -133,7 +138,7 @@ p > i {
 .past-songs-wrapper {
   background-color: #1e1e2d;
   grid-row-start: span 2;
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 /********** PREVIOUS SONGS CONTAINER **********/
@@ -150,11 +155,10 @@ p > i {
   color: aliceblue;
   font-size: 1rem;
   justify-content: space-evenly;
-  padding-bottom: 5%;
+  padding-bottom: 8%;
 }
 
 .song > img {
-  width: 70px;
   border-radius: 10%;
   grid-row-start: 1;
   grid-row-end: 3;
@@ -167,8 +171,13 @@ p > i {
 
 .song > h4 {
   margin-bottom: -14%;
+  font-weight: 400;
 }
 
+.song > p {
+  color: #636678;
+  font-size: .9rem;
+}
 
 
 .recent-songs {
@@ -201,7 +210,7 @@ header > h1 {
 
 
 .album {
-  font-size: 1.2rem;
+  font-size: .9rem;
   height: 95%;
   width: 70%;
   font-family: 'Dosis', sans-serif;
@@ -209,9 +218,18 @@ header > h1 {
 }
 
 .album > img {
-  height: 12.5rem;
+  height: 9.5rem;
   border-radius: 12px;
   margin-bottom: 8%;
+}
+
+.album > h4 {
+  font-weight: 100;
+  font-size: 1.4rem;
+}
+
+.album  > p {
+  color: #636678;
 }
 
 /********* CURRENT SONG PLAYING ***********/
